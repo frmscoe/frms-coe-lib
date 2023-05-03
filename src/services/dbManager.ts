@@ -223,7 +223,7 @@ export async function CreateDatabaseManager<T extends ManagerConfig>(
         const cacheVal = manager.nodeCache?.get(cacheKey);
         if (cacheVal) return Promise.resolve(cacheVal);
       }
-      const db = "configuration";
+      const db = "Configuration";
       const query: AqlQuery = aql`
         FOR doc IN ${db}
         FILTER doc.id == ${ruleId}
